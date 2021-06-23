@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Day 2021</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/36a1536d69.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navbar_menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#agenda">AGENDA</a></li>
+            <li><a href="#cis">ABOUT CIS</a></li>
+            <li><a href="#info">CERTIFICATE & DEGREE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <ul class="navbar_icons">
+            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="header_logo">
+        <a href="#">CLOUD DAY</a>
+    </div>
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="Images/slide1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/slide2.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/slide3.png" style="width:100%">
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+    </section>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Go to Top</button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <div class="agenda" id="agenda">
+        <h2>AGENDA</h2>
+        <p align="middle">
+            <iframe src="agenda.pdf#toolbar=0" width="60%" height="500" style="border: none"></iframe>
+        </p>
+    </div>
+    <div class="cis" id="cis">
+        <h2>CIS IS...</h2>
+        <p align="middle">The Department of Computer Information Systems (CIS) at El Camino College offers a
+            state-of-the-art curriculum utilizing the most current software and hardware. The program is designed for
+            the computer novice, the individual seeking career enhancement, and for the student completing a two-year
+            degree, or transferring to a four-year college.
+
+            CIS prepares students for careers in Information Systems. Emphasis is on the fundamentals of business
+            information systems, computer hardware, system software, decision support systems, e-commerce, web
+            development, help desk and telecommunications including network management. The CIS curriculum provides the
+            student a solid foundation to compete in this rapidly changing field that is in high demand in the
+            marketplace.
+
+            The CIS graduate will be able to deliver timely, accurate and pertinent information that is critical to
+            decision-making in a competitive business environment.</p>
+    </div>
+    <!-- Certificate & Degree -->
+    <section class="info" id="info">
+        <h2>Certificate & Degree</h2>
+        <p>Be a part of one or more of the following programs and prepare yourself for one or more
+            Industry recognized certifications to boost your career and your pay! Complete the
+            certificate programs to prepare yourself for more advanced certifications.<br>
+        </p>
+        <button class="accordion">Cybersecurity</button>
+        <div class="panel">
+            <p>Required Core: Administration of Justice 142;<br>
+                Computer Information Systems 13, 40, 119, 120, 121, 122, 137<br>
+                Total Units: 24</p>
+        </div>
+
+        <button class="accordion">Cloud Computing and Programming with Amazon Web Services</button>
+        <div class="panel">
+            <p>Required Core: Computer Information Systems 133, 150, 152, 154, 156<br>
+                Total Units: 16</p>
+        </div>
+
+        <button class="accordion">Cloud Computing with Amazon Web Services</button>
+        <div class="panel">
+            <p>Required Core: Computer Information Systems 150, 152, 154, 156<br>
+                Total Units: 12</p>
+        </div>
+        <div class="moreInfo">
+            <p>Contact your CIS Instructor for more information;<br>
+                or visit <a href="https://www.elcamino.edu/academics/business/cis/">The El Camino College CIS Degrees
+                    and Certificates website.</a></p>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+    </section>
+    <!-- End of Certificate & degree -->
+
+    <div class="contact" id="contact">
+        <h2 class="title">CONTACT US</h2>
+        <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+            <label for="myFName">First Name</label>
+            <input type="text" name="myFName" id="myFName" required="required">
+            <label for="myLName">Last Name</label>
+            <input type="text" name="myLName" id="meLName" required="required">
+            <label for="myEmail">E-mail:</label>
+            <input type="email" name="myEmail" id="myEmail" required="required">
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" name="mobile" id="mobile">
+            <label for="myAddress">Address:</label>
+            <input type="Address" name="myAddress" id="myAddress">
+            <label for="myDate">Date:</label>
+            <input type="date" name="myDate" id="myDate">
+            <label for="myItem">Interest Course:</label>
+            <input type="text" name="myItem" id="myItem" list="items">
+            <datalist id="items">
+                <option value="Cybersecurity" label="Cybersecurity">
+                <option value="Cloud Computing and Programming with Amazon Web Services"
+                    label="Cloud Computing and Programming with Amazon Web Services">
+                <option value="Cloud Computing with Amazon Web Services"
+                    label="Cloud Computing with Amazon Web Services">
+                <option value="AWS Certified Cloud Practitioner" label="AWS Certified Cloud Practitioner">
+                <option value="CompTIA A+ Certified" label="CompTIA A+ Certified">
+                <option value="CompTIA Security+" label="CompTIA Security+">
+            </datalist>
+            <label for="myComments">Comments:</label>
+            <textarea name="myComments" id="comments" rows="5" cols="50"></textarea>
+            <input type="submit" value="Submit" id="mySubmit">
+        </form>
+    </div>
+    <footer>
+        <img src="Images/elcamino_logo.png">
+        <ul class="footer_nav">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#agenda">AGENDA</a></li>
+            <li><a href="#cis">ABOUT CIS</a></li>
+            <li><a href="#info">CERTIFICATE & DEGREE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+        </ul>
+    </footer>
+    <p class="copyright" align="middle"><strong>Copyright &copy; El Camino College CLOUD DAY 2021. All Rights
+            reserved.</strong></p>
+</body>
+
+</html>

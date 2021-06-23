@@ -1,0 +1,345 @@
+:root {
+    --text-color: #98cbd8;
+    --background-color: #054696;
+    --accent-color: #b160b1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+}*/
+
+.header_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    padding: 8px 12px;
+}
+
+.header_logo a {
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: bolder;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    font-size: 20px;
+    padding: 8px 20px;
+}
+
+.navbar_menu li a {
+    color: white;
+}
+    
+.navbar_menu li:hover {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+.navbar_icons {
+    display: flex;
+    color: var(--text-color);
+    list-style: none;
+    padding-left: 0;
+    font-size: 24px;
+}
+
+.navbar_icons li {
+    padding: 8px 20px;
+}
+.navbar_icons li a {
+    color: white;
+}
+.navbar_icons li:hover {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+/* Slideshow */
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+.slideshow {
+    background-color: var(--background-color);
+    padding: 30px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+/* End of SlideShow Container */
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 30px;
+}
+
+/* Go to top Button */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color:var(--accent-color);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+/* Agenda*/
+.agenda {
+
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+/* cis*/
+.cis {
+    background-color: var(--background-color);
+    color: white;
+}
+
+/* certificate & degree*/
+.info {
+    color: var(--background-color);
+}
+
+.accordion {
+    background-color:var(--text-color);
+    color:var(--background-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid var(--background-color);
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color:var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+.moreInfo {
+    background-color: var(--background-color);
+    color: var(--text-color);
+} 
+.moreInfo p a {
+    color: white;
+    text-decoration: underline;
+}
+/* contact us*/
+.contact {
+    background-color: var(--text-color);
+    padding: 30px;
+}
+
+label {
+    float: left;
+    clear: left;
+    display: block;
+    width: 20em;
+    padding-right: 1em;
+    text-align: center;
+    margin-left: 10em;
+    border-radius: 4px;
+}
+
+input {
+    display: block;
+    height: 2.5em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+}
+
+textarea {
+    display: block;
+    margin-bottom: 1em;
+    border-radius: 4px;
+}
+
+#mySubmit {
+    margin-left: 36em;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: white;
+}
+footer ul {
+    display: flex;
+    list-style: none;   
+}
+footer ul li {
+    color: var(--background-color);
+    padding: 10px 20px;
+    text-decoration: underline;
+}
+.copyright {
+    color: var(--background-color);
+}
+
+@media screen and (max-width: 768px) {
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+    }
+
+    .navbar_menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_menu a {
+        display: block;
+    }
+
+    .navbar_icons {
+        flex-direction:row;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_icons li {
+        text-align: center;
+        padding: 8px 12px;
+    }
+    .navbar_icons a {
+        display: block;
+    }
+
+    label {
+        margin-left: 0;
+        width:10em;
+    }
+    #mySubmit {
+        margin-left: 12em;
+    }
+}   
